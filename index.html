@@ -25,7 +25,7 @@
 </head>
 <body>
     <h1>WattMate Privacy Policy</h1>
-    <p class="last-updated">Last updated: December 2024</p>
+    <p class="last-updated">Last updated: January 2025</p>
 
     <div class="highlight">
         <strong>Summary:</strong> WattMate collects only the data necessary to track your EV charging sessions. Your data is stored securely in the cloud and is never sold to third parties.
@@ -38,32 +38,40 @@
 
     <h3>2.1 Account Information</h3>
     <ul>
-        <li><strong>Email address:</strong> Used for account creation and authentication</li>
+        <li><strong>Email address:</strong> Used for account creation, authentication, and verification</li>
         <li><strong>Display name:</strong> Optional, used for personalization</li>
+        <li><strong>Subscription status:</strong> Free or Premium tier information</li>
     </ul>
 
     <h3>2.2 Vehicle Information</h3>
     <ul>
-        <li>Vehicle make, model, and year</li>
-        <li>Battery capacity</li>
-        <li>Odometer readings</li>
-        <li>Efficiency data</li>
+        <li>Vehicle make, model, variant, and year</li>
+        <li>Battery capacity (kWh)</li>
+        <li>Power output (kW or hp)</li>
+        <li>Drivetrain type</li>
+        <li>Currency setting (per vehicle)</li>
     </ul>
 
     <h3>2.3 Charging Session Data</h3>
     <ul>
-        <li>Charging location names (entered by you)</li>
-        <li>Energy consumed (kWh)</li>
-        <li>Charging costs</li>
         <li>Date and time of sessions</li>
+        <li>Odometer readings (km)</li>
         <li>State of charge (start/end percentages)</li>
+        <li>Energy consumed (kWh)</li>
+        <li>Charging duration</li>
+        <li>Charging costs</li>
+        <li>Charging type (AC/DC)</li>
+        <li>Trip consumption from board computer (optional)</li>
+        <li>Missed sessions indicator for data continuity</li>
     </ul>
 
-    <h3>2.4 Preferences</h3>
+    <h3>2.4 App Preferences</h3>
     <ul>
-        <li>Display units (km/miles)</li>
-        <li>Currency preference</li>
-        <li>Language preference</li>
+        <li>Distance units (km/miles)</li>
+        <li>Consumption units (kWh/100km, Wh/km, mi/kWh, kWh/100mi)</li>
+        <li>Power units (kW/hp)</li>
+        <li>Date format preference</li>
+        <li>Theme preference (Light/Dark/System)</li>
     </ul>
 
     <h2>3. How We Use Your Information</h2>
@@ -72,6 +80,8 @@
         <li>Provide and maintain the WattMate service</li>
         <li>Calculate charging statistics and efficiency metrics</li>
         <li>Sync your data across your devices</li>
+        <li>Send account verification emails</li>
+        <li>Process subscription purchases</li>
         <li>Improve the app experience</li>
     </ul>
 
@@ -80,19 +90,25 @@
     <ul>
         <li><strong>Firebase Authentication:</strong> Manages your account securely</li>
         <li><strong>Cloud Firestore:</strong> Stores your vehicle and charging data</li>
+        <li><strong>Firebase Remote Config:</strong> Delivers the EV catalog database</li>
     </ul>
     <p>All data is encrypted in transit and at rest. We follow industry-standard security practices to protect your information.</p>
 
     <h2>5. Third-Party Services</h2>
     <p>WattMate uses the following third-party services:</p>
     <ul>
-        <li><strong>Google Firebase:</strong> Authentication, database, and app configuration</li>
+        <li><strong>Google Firebase:</strong> Authentication, database, cloud functions, and app configuration</li>
         <li><strong>Google Sign-In:</strong> Optional authentication method</li>
+        <li><strong>Google Play Billing:</strong> Processes subscription purchases (Premium tier)</li>
+        <li><strong>Brevo (Sendinblue):</strong> Sends account verification emails</li>
+        <li><strong>Frankfurter API:</strong> Provides currency exchange rates from the European Central Bank (no personal data is sent)</li>
     </ul>
     <p>These services have their own privacy policies. We encourage you to review them:</p>
     <ul>
         <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://play.google.com/about/play-terms/" target="_blank">Google Play Terms of Service</a></li>
+        <li><a href="https://www.brevo.com/legal/privacypolicy/" target="_blank">Brevo Privacy Policy</a></li>
     </ul>
 
     <h2>6. Data Sharing</h2>
@@ -100,6 +116,7 @@
     <p>We may share your information only:</p>
     <ul>
         <li>With your consent</li>
+        <li>With service providers who assist in operating the app (listed in Section 5)</li>
         <li>To comply with legal obligations</li>
         <li>To protect our rights or the safety of users</li>
     </ul>
@@ -108,7 +125,7 @@
     <p>You have the right to:</p>
     <ul>
         <li><strong>Access:</strong> View all your data within the app</li>
-        <li><strong>Export:</strong> Export your data in JSON format</li>
+        <li><strong>Export:</strong> Export your charging sessions in CSV format</li>
         <li><strong>Delete:</strong> Delete your account and all associated data</li>
         <li><strong>Correct:</strong> Update your information at any time</li>
     </ul>
@@ -124,7 +141,11 @@
     <p>This action is permanent and cannot be undone. All your vehicles, charging sessions, and preferences will be deleted.</p>
 
     <h2>8. Data Retention</h2>
-    <p>We retain your data for as long as your account is active. When you delete your account, all your data is permanently deleted from our servers within 30 days.</p>
+    <ul>
+        <li>We retain your data for as long as your account is active.</li>
+        <li>When you delete your account, all your data is permanently deleted from our servers within 30 days.</li>
+        <li>Unverified accounts (accounts that have not completed email verification) are automatically deleted after 7 days.</li>
+    </ul>
 
     <h2>9. Children's Privacy</h2>
     <p>WattMate is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
@@ -134,11 +155,11 @@
 
     <h2>11. Contact Us</h2>
     <p>If you have questions about this Privacy Policy or your data, please contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:support@wattmate.app">support@wattmate.app</a></p>
+    <p><strong>Email:</strong> <a href="mailto:support@watt-mate.app">support@watt-mate.app</a></p>
 
     <hr style="margin-top: 40px;">
     <p style="color: #666; font-size: 0.9em;">
-        WattMate is developed by Zorvalth. This privacy policy is effective as of December 2024.
+        WattMate is developed by Zorvalth. This privacy policy is effective as of January 2025.
     </p>
 </body>
 </html>
